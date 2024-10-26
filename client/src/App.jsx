@@ -5,18 +5,20 @@ import Result from './pages/Result'
 import Buycoins from './pages/Buycoins'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import { SignInButton } from '@clerk/clerk-react'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen bg-slate-50'>
+      <ToastContainer position='top-center'/>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/result' element={<Result />} />
         <Route path='/buy' element={<Buycoins />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
